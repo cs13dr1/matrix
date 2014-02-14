@@ -3,6 +3,8 @@ public class Matrix {
 	
 	public static void main(String[] args) {
 		
+		//erste Versuche mit Java
+		
 		Operate matrix = new Operate();
 		
 		int a[][] = new int[2][2];
