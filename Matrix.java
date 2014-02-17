@@ -1,18 +1,35 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Matrix {
 	
 	public static void main(String[] args) {
-		
+				
 		//erste Versuche mit Java
 		
 		Operate matrix = new Operate();
 		
 		int a[][] = new int[2][2];
 		
-		a[0][0] = 2;
-		a[0][1] = 4;
-		a[1][0] = 6;
-		a[1][1] = 8;
+		//Index i
+		for (int i = 0; i < a.length; i++) {
+			//Index j
+			for (int j = 0; j < a[i].length; j++) {
+				try {
+					System.out.println("Bitte geben Sie eine Zahl für: a[" + (i+1) + "," + (j+1) + "]");
+					BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+					a[i][j] = Integer.parseInt(in.readLine());
+				} catch (Exception e) {
+					e.getMessage();
+					e.printStackTrace();
+				}				
+			}
+		}
+		
+//		a[0][0] = 2;
+//		a[0][1] = 4;
+//		a[1][0] = 6;
+//		a[1][1] = 8;
 		
 		//statische Zuordnung der Arrayinhalte
 		
@@ -34,5 +51,4 @@ public class Matrix {
 		System.out.println("Die Matrix hat eine Inverse: " + invers);
 		
 	}
-
 }
